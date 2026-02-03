@@ -34,3 +34,37 @@ We trained and compared:
 
 ## License
 CC0-1.0 (dataset license, check dataset source)
+
+## Results Summary
+
+| Model | Accuracy | Macro F1 |
+|------|----------|----------|
+| Logistic Regression (TF-IDF) | ~0.87 | ~0.57 |
+| Random Forest | ~0.84 | ~0.56 |
+| SVM | ~0.82 | ~0.61 |
+| LSTM | ~0.86 | ~0.56 |
+| BERT (fine-tuned on 10k samples) | ~0.86 | ~0.55 |
+
+### Confusion Matrices
+
+### LSTM Confusion Matrix
+![LSTM Confusion Matrix](lstm_confusion_matrix.png)
+
+### BERT Confusion Matrix
+![BERT Confusion Matrix](bert_confusion_matrix.png)
+
+
+
+**Key Observations**
+- Positive sentiment is classified with high accuracy across all models
+- Neutral sentiment is challenging due to class imbalance
+- Deep learning and transformer models capture contextual information better
+
+
+## Future Work
+
+- Handle class imbalance using SMOTE or focal loss
+- Improve Neutral sentiment classification
+- Experiment with DistilBERT for faster inference
+- Perform hyperparameter tuning for LSTM and Transformer models
+- Deploy the model using FastAPI or Streamlit
